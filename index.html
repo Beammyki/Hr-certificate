@@ -98,12 +98,14 @@
             z-index: 1;
         }
 
-        /* --- ปรับตำแหน่งให้ตรงกับกรอบสีดำ --- */
+        /* --- ตำแหน่งที่คุณปรับแต่งไว้แล้ว --- */
         
-        /* 1. ชื่อผู้รับ (ตรงกลาง) */
+        /* --- ส่วนกำหนดตำแหน่งตัวอักษร (อัปเดต: ชิดซ้ายตามคำขอ) --- */
+        
+        /* 1. ชื่อผู้รับเกียรติบัตร (ยังคงกึ่งกลางตามเดิม) */
         .name-box {
             position: absolute;
-            top: 34.5%; /* ปรับลงมานิดหน่อยให้สมดุล */
+            top: 34.5%; 
             left: 50%;
             transform: translateX(-50%);
             width: 80%;
@@ -111,49 +113,50 @@
             font-size: 26px; 
             font-weight: 600;
             color: #000000;
-            text-align: center;
+            text-align: center; /* กึ่งกลาง */
+            white-space: nowrap;
         }
 
-        /* 2. วันที่อบรม (ขยับไปทางขวาให้เข้ากรอบ) */
+        /* 2. วันที่อบรม (ชิดซ้าย) */
         .date1-box {
             position: absolute;
             top: 75.9%; 
-            left: 31.5%; /* เปลี่ยนจาก 28.5% เป็น 33% เพื่อให้หลบคำว่า "อบรมวันที่" */
-            transform: translateX(-50%);
-            width: 15%;
+            left: 25.5%; /* ปรับค่า Left เพื่อให้จุดเริ่มต้นตัวอักษรตรงกับขอบซ้ายของกรอบ */
+            width: 20%;
             z-index: 2;
             font-size: 20px; 
             font-weight: 600;
             color: #000000;
-            text-align: center;
+            text-align: left; /* ชิดซ้าย */
+            white-space: nowrap;
         }
 
-        /* 3. ให้ไว้ ณ วันที่ (ขยับไปทางขวาให้เข้ากรอบ) */
+        /* 3. ให้ไว้ ณ วันที่ (ชิดซ้าย) */
         .date2-box {
             position: absolute;
             top: 75.9%; 
-            left: 76.5%; /* เปลี่ยนจาก 71.5% เป็น 78.5% เพื่อให้หลบคำว่า "ให้ไว้ ณ วันที่" */
-            transform: translateX(-50%);
-            width: 15%;
+            left: 70.5%; /* ปรับค่า Left เพื่อให้จุดเริ่มต้นตัวอักษรตรงกับขอบซ้ายของกรอบ */
+            width: 20%;
             z-index: 2;
             font-size: 20px; 
             font-weight: 600;
             color: #000000;
-            text-align: center;
+            text-align: left; /* ชิดซ้าย */
+            white-space: nowrap;
         }
 
-        /* 4. ชื่อวิทยากร (กรอบล่างซ้าย) */
+        /* 4. ชื่อวิทยากร (ชิดซ้าย) */
         .lecturer-box {
             position: absolute;
             top: 87.7%; 
-            left: 28.5%; /* อยู่ตรงกลางวงเล็บพอดี */
-            transform: translateX(-50%);
-            width: 18%;
+            left: 16.0%; /* ปรับค่า Left ให้ตรงกับขอบซ้ายของกรอบด้านล่าง */
+            width: 25%;
             z-index: 2;
             font-size: 20px; 
             font-weight: 600;
             color: #000000;
-            text-align: center;
+            text-align: center; /* ชิดซ้าย */
+            white-space: nowrap;
         }
 
         @media print {
@@ -240,6 +243,5 @@
             });
         }
     </script>
-
 </body>
 </html>
